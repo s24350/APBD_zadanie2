@@ -10,3 +10,15 @@ C:\Users\s24350\Downloads\Zadanie 2\zadanie\zadanie\LegacyApp\obj\Debug\net7.0\L
 C:\Users\s24350\Downloads\Zadanie 2\zadanie\zadanie\LegacyApp\obj\Debug\net7.0\refint\LegacyApp.dll
 C:\Users\s24350\Downloads\Zadanie 2\zadanie\zadanie\LegacyApp\obj\Debug\net7.0\LegacyApp.pdb
 C:\Users\s24350\Downloads\Zadanie 2\zadanie\zadanie\LegacyApp\obj\Debug\net7.0\ref\LegacyApp.dll
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\bin\Debug\net7.0\LegacyApp.deps.json
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\bin\Debug\net7.0\LegacyApp.dll
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\bin\Debug\net7.0\LegacyApp.pdb
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\LegacyApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\LegacyApp.AssemblyInfoInputs.cache
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\LegacyApp.AssemblyInfo.cs
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\LegacyApp.csproj.CoreCompileInputs.cache
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\LegacyApp.sourcelink.json
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\LegacyApp.dll
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\refint\LegacyApp.dll
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\LegacyApp.pdb
+C:\Users\s24350\source\repos\APBD_zadanie_2\APBD_zadanie2\LegacyApp\obj\Debug\net7.0\ref\LegacyApp.dll

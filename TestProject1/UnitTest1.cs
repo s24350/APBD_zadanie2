@@ -6,7 +6,7 @@ namespace TestProject1
     public class UnitTest1
     {
         [Fact]
-        public void AddUser_Should_Retutn_False_When_Missing ()
+        public void AddUser_Should_Retutn_False_When_Missing_Name()
         {
             //Arrange
             var service = new UserService();
@@ -17,7 +17,6 @@ namespace TestProject1
 
             //Assert
             Assert.False(res1);
-
 
         }
 
@@ -40,7 +39,7 @@ namespace TestProject1
             var service = new UserService();
 
             //walidacja wieku
-            var res3 = service.AddUser("Jan", "Kowalsi", "Kowalskiwp.pl", new DateTime(2010, 1, 1), 1);
+            var res3 = service.AddUser("Jan", "Kowalski", "Kowalskiwp.pl", new DateTime(2010, 1, 1), 1);
             Assert.False(res3);
 
         }

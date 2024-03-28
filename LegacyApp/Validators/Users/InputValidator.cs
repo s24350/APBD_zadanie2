@@ -11,7 +11,7 @@ namespace LegacyApp.Validators.Users
     {
         public bool ValidateEmail(string email)
         {
-            if (!email.Contains("@") && !email.Contains("."))
+            if (!email.Contains("@") || !email.Contains("."))
             {
                 return false;
             }
