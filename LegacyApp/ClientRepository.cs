@@ -1,10 +1,11 @@
-﻿using System;
+﻿using LegacyApp.Core.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 
 namespace LegacyApp
 {
-    public class ClientRepository
+    public class ClientRepository : IClientRepository
     {
         /// <summary>
         /// This collection is used to simulate remote database
@@ -16,7 +17,8 @@ namespace LegacyApp
             {3, new Client{ClientId = 3, Name = "Smith", Address = "Warszawa, Kolorowa 22", Email = "smith@gmail.pl", Type = "ImportantClient"}},
             {4, new Client{ClientId = 4, Name = "Doe", Address = "Warszawa, Koszykowa 32", Email = "doe@gmail.pl", Type = "ImportantClient"}},
             {5, new Client{ClientId = 5, Name = "Kwiatkowski", Address = "Warszawa, Złota 52", Email = "kwiatkowski@wp.pl", Type = "NormalClient"}},
-            {6, new Client{ClientId = 6, Name = "Andrzejewicz", Address = "Warszawa, Koszykowa 52", Email = "andrzejewicz@wp.pl", Type = "NormalClient"}}
+            {6, new Client{ClientId = 6, Name = "Andrzejewicz", Address = "Warszawa, Koszykowa 52", Email = "andrzejewicz@wp.pl", Type = "NormalClient"}},
+            {7, new Client{ClientId = 7, Name = "Kowalewski", Address = "Warszawa, Komitetu Obrony Robotników 52", Email = "kowal@wp.pl", Type = "NormalClient"}}
         };
         
         public ClientRepository()
@@ -27,7 +29,7 @@ namespace LegacyApp
         /// Simulating fetching a client from remote database
         /// </summary>
         /// <returns>Returning client object</returns>
-        internal Client GetById(int clientId)
+        public Client GetById(int clientId) //było internal, dałem public bo nie można było implementować I.
         {
             int randomWaitTime = new Random().Next(2000);
             Thread.Sleep(randomWaitTime);

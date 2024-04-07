@@ -1,6 +1,9 @@
 using LegacyApp;
 using Xunit;
 
+//Example from lectue:
+// Assert.Equal("Some value", res);
+
 namespace TestProject1
 {
     public class UnitTest1
@@ -17,17 +20,18 @@ namespace TestProject1
 
             //Assert
             Assert.False(res1);
+            //jak wy¿ej lub Assert.Equal(EXPECTED_VALUE, ACTUAL_VALUE);
 
         }
 
         [Fact]
-        public void AddUser_Should_Retutn_False_When_Missing_mail()
+        public void AddUser_Should_Retutn_False_When_Email_Missing_At_And_Dot()
         {
             //Arrange
             var service = new UserService();
 
             //walidacja maila
-            var res2 = service.AddUser("Jan", "Kowalsi", "Kowalskiwp.pl", new DateTime(1980, 1, 1), 1);
+            var res2 = service.AddUser("Jan", "Kowalsi", "Kowalskiwppl", new DateTime(1980, 1, 1), 1);
             Assert.False(res2);
 
 
