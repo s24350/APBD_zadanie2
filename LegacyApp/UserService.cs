@@ -14,14 +14,16 @@ namespace LegacyApp
 
         private IInputValidator _inputValidator;
         private IClientRepository _clientRepository;
-        private ICreditLimitService _creditLimitService;
+        
+        private ICreditLimitCheck _creditLimitCheck;
 
         public UserService() { //alternatywnie IInputValidator _inputValidator w konstruktorze;
             _inputValidator = new InputValidator();
             //this._validator = _validator;
 
             _clientRepository = new ClientRepository();
-            _creditLimitService = new UserCreditService();
+            
+            _creditLimitCheck = new CreditLimitCheck();
         }
 
         
@@ -51,7 +53,7 @@ namespace LegacyApp
             //Infrastruktura
             
             var client = _clientRepository.GetById(clientId);
-
+            
             var user = new User
             {
                 Client = client,
@@ -61,31 +63,10 @@ namespace LegacyApp
                 LastName = lastName
             };
 
-            //to nas boli - DIP, if wyniesc abstrakcyjnie poza te klase.
-            // logika biznesowa wymieszana z infrastrutktura
-            if (client.Type == "VeryImportantClient")
-            {
-                user.HasCreditLimit = false;
-            }
-            else if (client.Type == "ImportantClient")
-            {
-                //using działa podobnie jak try with resources.
-                //jak dojdzie się do końca bloku to uruchomiona zostanie metoda zwalniająca zadoby
-                //wymaga implementacji Interfejsu IDisposable
 
-                    int creditLimit = _creditLimitService.GetCreditLimit(user.LastName, user.DateOfBirth);
-                    creditLimit = creditLimit * 2;
-                    user.CreditLimit = creditLimit;
-            }
-            else
-            {
-                user.HasCreditLimit = true;
-                using (var userCreditService = new UserCreditService())
-                {
-                    int creditLimit = userCreditService.GetCreditLimit(user.LastName, user.DateOfBirth);
-                    user.CreditLimit = creditLimit;
-                }
-            }
+            _creditLimitCheck.CheckCreditLimit(ref user, client.Type);
+
+
 
             //Logika biznesowa
             if (user.HasCreditLimit && user.CreditLimit < 500)
